@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"name": "handson-llmaas-code-development",
+			"path": "/projects/handson-llmaas-code-development"
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"continue.continue"
+		]
+	},
+	"settings": {
+		"workbench.colorTheme": "Winter is Coming (Light)",
+		"workbench.preferredDarkColorTheme": "Winter is Coming (Dark Blue)",
+		"workbench.preferredLightColorTheme": "Winter is Coming (Light)"
+	}
+}
