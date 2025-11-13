@@ -14,9 +14,8 @@ spec:
   source:
     type: Git
     git:
-      uri: https://gitea.INGRESS_DOMAIN/USERNAME/handson-llmaas-showroom.git
+      uri: https://gitea.INGRESS_DOMAIN/USERNAME/handson-llmaas-code-development.git
       ref: main
-    contextDir: exercises/05-code-development
   strategy:
     type: Docker
     dockerStrategy:

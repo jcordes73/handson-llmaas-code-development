@@ -16,18 +16,12 @@ Students will complete a partially-built Flask web application that manages task
 ## Application Structure
 
 ```
-05-code-development/
-├── app.py                 # Main Flask application (INCOMPLETE - students complete this)
-├── requirements.txt       # Python dependencies
-├── templates/
-│   └── index.html        # Frontend UI (complete)
-├── Dockerfile            # Container build configuration
-└── openshift/            # OpenShift/Kubernetes manifests
-    ├── buildconfig.yaml  # Builds container from Git
-    ├── imagestream.yaml  # Tracks image versions
-    ├── deployment.yaml   # Application deployment
-    ├── service.yaml      # Internal networking
-    └── route.yaml        # External access
+handson-llmaas-code-development
+├── openshift              # Kubernetes manifests
+├── templates              # Frontend UI (complete)
+├── app.py                 # Main Flask application (incomplete)
+├── Dockerfile             # Container configuration
+└── requirements.txt       # Python dependencies
 ```
 
 ## Incomplete Functions
