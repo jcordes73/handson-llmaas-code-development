@@ -1,0 +1,26 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: task-manager
+  labels:
+    app: task-manager
+    app.kubernetes.io/name: task-manager
+    app.kubernetes.io/part-of: ai-workshop
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: task-manager:latest
+  source:
+    type: Git
+    git:
+      uri: https://gitea.INGRESS_DOMAIN/USERNAME/handson-llmaas-showroom.git
+      ref: main
+    contextDir: exercises/05-code-development
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+  triggers:
+  - type: ConfigChange
+  - type: ImageChange

@@ -1,0 +1,11 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: task-manager
+  labels:
+    app: task-manager
+    app.kubernetes.io/name: task-manager
+    app.kubernetes.io/part-of: ai-workshop
+spec:
+  lookupPolicy:
+    local: false

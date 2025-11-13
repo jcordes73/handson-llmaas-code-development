@@ -1,0 +1,19 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: task-manager
+  labels:
+    app: task-manager
+    app.kubernetes.io/name: task-manager
+    app.kubernetes.io/part-of: ai-workshop
+spec:
+  to:
+    kind: Service
+    name: task-manager
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None

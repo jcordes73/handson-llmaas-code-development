@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: task-manager
+  labels:
+    app: task-manager
+    app.kubernetes.io/name: task-manager
+    app.kubernetes.io/part-of: ai-workshop
+spec:
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: task-manager
+  type: ClusterIP
